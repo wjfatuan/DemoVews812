@@ -10,8 +10,8 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
-    val numLeft = 10
-    val numRight = 20
+    var numLeft = (0..100).random()
+    var numRight = (0..100).random()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Ganaste :)", Toast.LENGTH_LONG).show()
             else
                 Toast.makeText(this, "Perdiste :(", Toast.LENGTH_LONG).show()
+            numLeft = (0..100).random()
+            numRight = (0..100).random()
         }
 
         btnRight.setOnClickListener {
@@ -38,6 +40,8 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Ganaste :)", Toast.LENGTH_LONG).show()
             else
                 Toast.makeText(this, "Perdiste :(", Toast.LENGTH_LONG).show()
+            numLeft = (0..100).random()
+            numRight = (0..100).random()
         }
 
     }
